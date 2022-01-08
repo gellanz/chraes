@@ -1,0 +1,206 @@
+1575525726379	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.oULVZoHY3WwM"
+
+(firefox-esr:10675): Gtk-WARNING **: 00:02:06.438: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(firefox-esr:10675): Gtk-WARNING **: 00:02:06.442: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:10738): Gtk-WARNING **: 00:02:07.580: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:10738): Gtk-WARNING **: 00:02:07.584: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:10782): Gtk-WARNING **: 00:02:09.561: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:10782): Gtk-WARNING **: 00:02:09.566: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1575525729944	Marionette	INFO	Listening on port 34773
+1575525729999	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596174781051	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.buXrdSzvn0LR"
+
+(firefox-esr:196319): Gtk-WARNING **: 00:53:01.120: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(firefox-esr:196319): Gtk-WARNING **: 00:53:01.124: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1596174782962	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1596174782962	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1596174782963	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1596174782963	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(/usr/lib/firefox-esr/firefox-esr:196433): Gtk-WARNING **: 00:53:04.222: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:196433): Gtk-WARNING **: 00:53:04.227: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: undefined, line 14: Error: An unexpected error occurred
+JavaScript error: moz-extension://ebc9ddc9-2c1f-4c7f-a3ce-b8582810fa12/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
+
+(/usr/lib/firefox-esr/firefox-esr:196463): Gtk-WARNING **: 00:53:04.597: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:196463): Gtk-WARNING **: 00:53:04.601: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:196506): Gtk-WARNING **: 00:53:06.856: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:196506): Gtk-WARNING **: 00:53:06.860: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1596174787924	Marionette	INFO	Listening on port 37869
+1596174787996	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596175185425	Marionette	INFO	Stopped listening on port 37869
+1596178422250	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.JcmDu4OX8SPY"
+
+(firefox-esr:198782): Gtk-WARNING **: 01:53:42.310: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(firefox-esr:198782): Gtk-WARNING **: 01:53:42.314: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1596178424978	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1596178424978	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1596178424979	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1596178424979	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(/usr/lib/firefox-esr/firefox-esr:198895): Gtk-WARNING **: 01:53:46.747: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:198895): Gtk-WARNING **: 01:53:46.751: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: undefined, line 14: Error: An unexpected error occurred
+JavaScript error: moz-extension://df9b73f5-7551-4267-bc59-4009647a69c1/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
+
+(/usr/lib/firefox-esr/firefox-esr:198925): Gtk-WARNING **: 01:53:47.198: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:198925): Gtk-WARNING **: 01:53:47.203: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+
+(/usr/lib/firefox-esr/firefox-esr:198970): Gtk-WARNING **: 01:53:50.055: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:198970): Gtk-WARNING **: 01:53:50.060: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1596178430693	Marionette	INFO	Listening on port 39099
+1596178430818	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 198782, Gecko_IOThread] WARNING: pipe error (82): Conexión reinicializada por la máquina remota: file /build/firefox-esr-kioUND/firefox-esr-68.9.0esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 198782, Gecko_IOThread] WARNING: pipe error (71): Conexión reinicializada por la máquina remota: file /build/firefox-esr-kioUND/firefox-esr-68.9.0esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1596184165819	Marionette	INFO	Stopped listening on port 39099
+1600149886021	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.JpxslRxsAqay"
+
+(firefox-esr:105262): Gtk-WARNING **: 01:04:46.133: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(firefox-esr:105262): Gtk-WARNING **: 01:04:46.139: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1600149887678	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1600149887678	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1600149887679	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1600149887679	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(/usr/lib/firefox-esr/firefox-esr:105373): Gtk-WARNING **: 01:04:48.925: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105373): Gtk-WARNING **: 01:04:48.935: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:105396): Gtk-WARNING **: 01:04:49.158: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105396): Gtk-WARNING **: 01:04:49.161: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: undefined, line 14: Error: An unexpected error occurred
+JavaScript error: moz-extension://2918e3dd-6d66-4760-baa9-88033da8f07e/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
+
+(/usr/lib/firefox-esr/firefox-esr:105447): Gtk-WARNING **: 01:04:51.343: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105447): Gtk-WARNING **: 01:04:51.347: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1600149892353	Marionette	INFO	Listening on port 38191
+1600149892376	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600149950782	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.SizdyZKCbHPU"
+
+(firefox-esr:105522): Gtk-WARNING **: 01:05:50.885: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(firefox-esr:105522): Gtk-WARNING **: 01:05:50.889: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1600149951857	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1600149951858	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1600149951858	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1600149951858	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[Parent 105262, Gecko_IOThread] WARNING: pipe error (61): Conexión reinicializada por la máquina remota: file /build/firefox-esr-6uO2g7/firefox-esr-68.11.0esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 105262, Gecko_IOThread] WARNING: pipe error (70): Conexión reinicializada por la máquina remota: file /build/firefox-esr-6uO2g7/firefox-esr-68.11.0esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1600149952688	Marionette	INFO	Stopped listening on port 38191
+
+(/usr/lib/firefox-esr/firefox-esr:105598): Gtk-WARNING **: 01:05:52.753: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105598): Gtk-WARNING **: 01:05:52.759: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:105618): Gtk-WARNING **: 01:05:53.101: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105618): Gtk-WARNING **: 01:05:53.112: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: undefined, line 14: Error: An unexpected error occurred
+JavaScript error: moz-extension://6179bac2-5328-4324-9a65-69e9128cac80/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+
+(/usr/lib/firefox-esr/firefox-esr:105679): Gtk-WARNING **: 01:05:55.242: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105679): Gtk-WARNING **: 01:05:55.250: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1600149955524	Marionette	INFO	Listening on port 34619
+1600149955603	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+1600149967473	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.2SwvxVkDA7ot"
+
+(firefox-esr:105737): Gtk-WARNING **: 01:06:07.551: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(firefox-esr:105737): Gtk-WARNING **: 01:06:07.557: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1600149968686	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1600149968687	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1600149968689	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1600149968689	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(/usr/lib/firefox-esr/firefox-esr:105806): Gtk-WARNING **: 01:06:09.429: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105806): Gtk-WARNING **: 01:06:09.434: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:105825): Gtk-WARNING **: 01:06:09.680: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105825): Gtk-WARNING **: 01:06:09.685: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: undefined, line 14: Error: An unexpected error occurred
+JavaScript error: moz-extension://33ce693b-d273-422b-82e6-5e2bf43d92ed/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+
+(/usr/lib/firefox-esr/firefox-esr:105882): Gtk-WARNING **: 01:06:12.524: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:105882): Gtk-WARNING **: 01:06:12.533: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1600149973074	Marionette	INFO	Listening on port 45949
+1600149973101	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 105882, Chrome_ChildThread] WARNING: pipe error (3): Conexión reinicializada por la máquina remota: file /build/firefox-esr-6uO2g7/firefox-esr-68.11.0esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1600200527306	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.CgoneIUOTsMf"
+
+(firefox-esr:124632): Gtk-WARNING **: 15:08:47.375: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(firefox-esr:124632): Gtk-WARNING **: 15:08:47.378: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1600200528257	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1600200528257	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1600200528257	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1600200528257	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(/usr/lib/firefox-esr/firefox-esr:124706): Gtk-WARNING **: 15:08:48.877: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:124706): Gtk-WARNING **: 15:08:48.881: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:124725): Gtk-WARNING **: 15:08:49.119: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:124725): Gtk-WARNING **: 15:08:49.123: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+JavaScript error: undefined, line 14: Error: An unexpected error occurred
+JavaScript error: moz-extension://96e76c4a-b891-46e5-993f-f0a489698f04/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+
+(/usr/lib/firefox-esr/firefox-esr:124780): Gtk-WARNING **: 15:08:51.228: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:124780): Gtk-WARNING **: 15:08:51.238: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1600200531555	Marionette	INFO	Listening on port 34177
+1600200531627	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 124632, Gecko_IOThread] WARNING: pipe error (78): Conexión reinicializada por la máquina remota: file /build/firefox-esr-6uO2g7/firefox-esr-68.11.0esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 124632, Gecko_IOThread] WARNING: pipe error (70): Conexión reinicializada por la máquina remota: file /build/firefox-esr-6uO2g7/firefox-esr-68.11.0esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1600202494579	Marionette	INFO	Stopped listening on port 34177
+1641601227798	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.w4CBF29wsRhp"
+
+(firefox-esr:1785891): Gtk-WARNING **: 18:20:28.023: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(firefox-esr:1785891): Gtk-WARNING **: 18:20:28.027: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:1786260): Gtk-WARNING **: 18:20:43.178: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:1786260): Gtk-WARNING **: 18:20:43.182: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:1786319): Gtk-WARNING **: 18:20:44.646: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:1786319): Gtk-WARNING **: 18:20:44.651: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+
+(/usr/lib/firefox-esr/firefox-esr:1786446): Gtk-WARNING **: 18:20:49.104: Theme parsing error: gtk.css:3028:20: 'background-padding' is not a valid property name
+
+(/usr/lib/firefox-esr/firefox-esr:1786446): Gtk-WARNING **: 18:20:49.109: Theme parsing error: gtk.css:4309:28: 'none' is not a valid color name
+1641601249709	Marionette	INFO	Listening on port 37189
+1641601249822	Marionette	WARN	TLS certificate errors will be ignored for this session

@@ -40,8 +40,9 @@ driver.find_element_by_id("ctl00_mainCopy_rblEsquema_0").click()
 
 
 # Iterating over the 3 carreers
-careers = ["B", "M", "T"]
-for career in careers:
+careers = {"M" : [], "B": [], "T": []}
+columns_name = ["Grupo", "Semestre", "Cupo", "Inscritos", "Disponibles", "Asignatura"]
+for career in careers.keys():
     # Finding the carreer selector 
     career_finder = driver.find_element_by_id("ctl00_mainCopy_dpdcarrera")
     career_selector = Select(career_finder)
@@ -51,7 +52,7 @@ for career in careers:
     ocupability_str = driver.find_element_by_id("ctl00_mainCopy_GrvOcupabilidad").text
     # Split the rows for each \n into a single string
     rows = ocupability_str.split("\n")
-    # Separate the columns by the spaces between them
+    # Separate in columns by the spaces between them
     ocupability_processed = [col.split(" ") for col in rows[1:]]
     # the course name gets separated, let's fix it
     for row in ocupability_processed:
@@ -63,7 +64,11 @@ for career in careers:
         del row[1:-4]
         # appending the concatenated string
         row.append(course_str)
-    # Pandas dataframe
-    columns_name = ["Grupo", "Semestre", "Cupo", "Inscritos", "Disponibles", "Materia"]
-    ocupability_table = pd.DataFrame(ocupability_processed, columns=columns_name)
-    print(ocupability_table)
+        careers[career].append(row)
+# Pandas dataframe
+mechatronics = pd.DataFrame(careers["M"][1:], columns=columns_name)
+bionics = pd.DataFrame(careers["B"][1:], columns=columns_name)
+telematicss = pd.DataFrame(careers["T"][1:], columns=columns_name)
+mechatronics.to_csv("mechatronics_schedules2.csv", index=False)
+bionics.to_csv("bionics_schedules2.csv", index=False)
+telematicss.to_csv("telematics_schedules2.csv", index=False)

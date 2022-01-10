@@ -70,6 +70,6 @@ mechatronics = pd.DataFrame(careers["M"][1:], columns=column_info).drop(["Edific
 bionics = pd.DataFrame(careers["B"][1:], columns=column_info).drop(["Edificio", "Salón", "Sab"], axis=1)
 telematicss = pd.DataFrame(careers["T"][1:], columns=column_info).drop(["Edificio", "Salón", "Sab"], axis=1)
 
-mechatronics.to_csv("./mechatronics_schedules.csv", index=False)
-bionics.to_csv("./bionics_schedules.csv", index=False)
-telematicss.to_csv("./telematics_schedules.csv", index=False)
+mechatronics.to_csv("Web_scraper/Data2022_2/mechatronics_schedules.csv", index=False)
+bionics.to_csv("Web_scraper/Data2022_2/bionics_schedules.csv", index=False)
+telematicss.to_csv("Web_scraper/Data2022_2/telematics_schedules.csv", index=False)

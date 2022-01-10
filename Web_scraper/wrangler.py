@@ -24,12 +24,12 @@ def to_json_api(df, career):
     with open(f'{career}_data.json', 'w') as f:
         json.dump(api, f)
 
-M_schedule = pd.read_csv("Web_scraper/test_notebooks/mechatronics_schedules.csv")
-M_ocupability = pd.read_csv("Web_scraper/test_notebooks/mechatronics_ocupability.csv")
-B_schedule = pd.read_csv("Web_scraper/test_notebooks/bionics_schedules.csv")
-B_ocupability = pd.read_csv("Web_scraper/test_notebooks/bionics_ocupability.csv")
-T_schedule = pd.read_csv("Web_scraper/test_notebooks/telematics_schedules.csv")
-T_ocupability = pd.read_csv("Web_scraper/test_notebooks/telematics_ocupability.csv")
+M_schedule = pd.read_csv("Web_scraper/Data2022_2/mechatronics_schedules.csv")
+M_ocupability = pd.read_csv("Web_scraper/Data2022_2/mechatronics_ocupability.csv")
+B_schedule = pd.read_csv("Web_scraper/Data2022_2/bionics_schedules.csv")
+B_ocupability = pd.read_csv("Web_scraper/Data2022_2/bionics_ocupability.csv")
+T_schedule = pd.read_csv("Web_scraper/Data2022_2/telematics_schedules.csv")
+T_ocupability = pd.read_csv("Web_scraper/Data2022_2/telematics_ocupability.csv")
 
 careers_dfs = [M_schedule, B_schedule, T_schedule, M_ocupability, B_ocupability, T_ocupability]
 careers = {"Mechatronics": (M_schedule, M_ocupability), "Bionics": (B_schedule, B_ocupability), "Telematics": (T_schedule, T_ocupability)}

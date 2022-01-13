@@ -7,6 +7,24 @@ from dotenv import load_dotenv
 import pandas as pd
 import os
 
+def create_id(df):
+    df["id"] = df["Asignatura"] + df["Grupo"]
+    return df
+
+def concat_sort(df1, df2):
+    df1 = df1.sort_values("id").reset_index(drop=True)
+    df2 = df2.sort_values("id").reset_index(drop=True)
+    df_complete = pd.concat([df1, df2], join="inner", axis=1)
+    df_complete = df_complete.loc[:,~df_complete.columns.duplicated()]
+    return df_complete
+
+def to_cosmos_db(df, career_letter):
+    courses_keys = df.columns.tolist()
+    processed_courses = df.values.tolist()
+    data = [dict(zip(courses_keys, course)) for course in processed_courses]
+    api = {"courses": data, "id":career_letter}
+    container_prueba.upsert_item(api)
+
 # User credentials
 load_dotenv()
 user = os.getenv('USERR')
@@ -20,6 +38,14 @@ DATABASE_ID = os.getenv('DBID')
 client = CosmosClient(HOST, {'masterKey': MASTER_KEY})
 db = client.get_database_client(DATABASE_ID)
 container_prueba = db.get_container_client("Prubea")
+
+# Schedules
+M_schedule = pd.read_csv("Web_scraper/Data2022_2/mechatronics_schedules.csv").dropna()
+B_schedule = pd.read_csv("Web_scraper/Data2022_2/bionics_schedules.csv").dropna()
+T_schedule = pd.read_csv("Web_scraper/Data2022_2/telematics_schedules.csv").dropna()
+
+for career_df in [M_schedule, B_schedule, T_schedule]:
+    career_df = create_id(career_df)
 
 # No window for Chrome driver
 op = webdriver.ChromeOptions()
@@ -81,13 +107,24 @@ for career in careers.keys():
         careers[career].append(row)
 
 columns_name = ["Grupo", "Semestre", "Cupo", "Inscritos", "Disponibles", "Asignatura", "id"]
-M_courses = {"courses": [], "id": "M"}
-B_courses = {"courses": [], "id": "B"}
-T_courses = {"courses": [], "id": "T"}
-courses_api_format = [M_courses, B_courses, T_courses]
 
-for career, for_api in zip(careers.values(), courses_api_format):
-    for course in career:
-        for_api["courses"].append({k:v for k,v in zip(columns_name, course)})
-    container_prueba.upsert_item(for_api)
+M_ocupability = pd.DataFrame(careers["M"], columns=columns_name)
+B_ocupability = pd.DataFrame(careers["B"], columns=columns_name)
+T_ocupability = pd.DataFrame(careers["T"], columns=columns_name)
+
+careers_to_api = {"M": (M_schedule, M_ocupability), "B": (B_schedule, B_ocupability), "T": (T_schedule, T_ocupability)}
+
+for career_letter in careers_to_api.keys():
+    career_full = concat_sort(careers_to_api[career_letter][0], careers_to_api[career_letter][1])
+    to_cosmos_db(career_full, career_letter)
+
+# M_courses = {"courses": [], "id": "M"}
+# B_courses = {"courses": [], "id": "B"}
+# T_courses = {"courses": [], "id": "T"}
+# courses_api_format = [M_courses, B_courses, T_courses]
+
+# for career, for_api in zip(careers.values(), courses_api_format):
+#     for course in career:
+#         for_api["courses"].append({k:v for k,v in zip(columns_name, course)})
+#     container_prueba.upsert_item(for_api)
 

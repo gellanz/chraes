@@ -6,6 +6,8 @@ from selenium.webdriver.common.by import By
 from dotenv import load_dotenv
 import pandas as pd
 import os
+from random import randint
+import time
 
 def create_id(df):
     df["id"] = df["Asignatura"] + df["Grupo"]
@@ -18,12 +20,12 @@ def concat_sort(df1, df2):
     df_complete = df_complete.loc[:,~df_complete.columns.duplicated()]
     return df_complete
 
-def to_cosmos_db(df, career_letter):
+def to_cosmos_db(df, career_letter, containerdb):
     courses_keys = df.columns.tolist()
     processed_courses = df.values.tolist()
     data = [dict(zip(courses_keys, course)) for course in processed_courses]
     api = {"courses": data, "id":career_letter}
-    container_prueba.upsert_item(api)
+    containerdb.upsert_item(api)
 
 # User credentials
 load_dotenv()
@@ -43,6 +45,7 @@ container_prueba = db.get_container_client("Prubea")
 M_schedule = pd.read_csv("Web_scraper/Data2022_2/mechatronics_schedules.csv").dropna()
 B_schedule = pd.read_csv("Web_scraper/Data2022_2/bionics_schedules.csv").dropna()
 T_schedule = pd.read_csv("Web_scraper/Data2022_2/telematics_schedules.csv").dropna()
+columns_name = ["Grupo", "Semestre", "Cupo", "Inscritos", "Disponibles", "Asignatura", "id"]
 
 for career_df in [M_schedule, B_schedule, T_schedule]:
     career_df = create_id(career_df)
@@ -69,7 +72,7 @@ captcha_in.send_keys(input("Captcha:"))
 pas_in.send_keys(Keys.RETURN)
 
 ################ here would be the while loop ###############
-
+# while True:
 # Going to the ocupation page in the same session
 driver.get('https://www.saes.upiita.ipn.mx/Academica/Ocupabilidad_grupos.aspx')
 
@@ -104,9 +107,7 @@ for career in careers.keys():
         # appending the ID
         row.append(course_str + row[0])
         # appending the course
-        careers[career].append(row)
-
-columns_name = ["Grupo", "Semestre", "Cupo", "Inscritos", "Disponibles", "Asignatura", "id"]
+        # # careers[career].append(row)
 
 M_ocupability = pd.DataFrame(careers["M"], columns=columns_name)
 B_ocupability = pd.DataFrame(careers["B"], columns=columns_name)
@@ -116,15 +117,6 @@ careers_to_api = {"M": (M_schedule, M_ocupability), "B": (B_schedule, B_ocupabil
 
 for career_letter in careers_to_api.keys():
     career_full = concat_sort(careers_to_api[career_letter][0], careers_to_api[career_letter][1])
-    to_cosmos_db(career_full, career_letter)
+    to_cosmos_db(career_full, career_letter, container_prueba)
 
-# M_courses = {"courses": [], "id": "M"}
-# B_courses = {"courses": [], "id": "B"}
-# T_courses = {"courses": [], "id": "T"}
-# courses_api_format = [M_courses, B_courses, T_courses]
-
-# for career, for_api in zip(careers.values(), courses_api_format):
-#     for course in career:
-#         for_api["courses"].append({k:v for k,v in zip(columns_name, course)})
-#     container_prueba.upsert_item(for_api)
-
+    # time.sleep(10)

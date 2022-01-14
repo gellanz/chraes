@@ -103,11 +103,10 @@ for career in careers.keys():
         del row[1:-4]
         # appending the concatenated string
         row.append(course_str)
-        careers[career].append(row)
         # appending the ID
         row.append(course_str + row[0])
         # appending the course
-        # # careers[career].append(row)
+        careers[career].append(row)
 
 M_ocupability = pd.DataFrame(careers["M"], columns=columns_name)
 B_ocupability = pd.DataFrame(careers["B"], columns=columns_name)

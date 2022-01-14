@@ -1,56 +1,59 @@
-azure-core @ file:///home/conda/feedstock_root/build_artifacts/azure-core_1640818730438/work
-azure-cosmos @ file:///home/conda/feedstock_root/build_artifacts/azure-cosmos_1633530198127/work
-backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
-beautifulsoup4 @ file:///tmp/build/80754af9/beautifulsoup4_1631874778482/work
+azure-core==1.21.1
+azure-cosmos==4.2.0
+backcall==0.2.0
+beautifulsoup4==4.10.0
 Bottleneck==1.3.2
 brotlipy==0.7.0
 certifi==2021.10.8
-cffi @ file:///tmp/build/80754af9/cffi_1625807838443/work
-chardet @ file:///tmp/build/80754af9/chardet_1607706746162/work
-charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+cffi==1.14.6
+chardet==4.0.0
+charset-normalizer==2.0.4
 click==8.0.3
-cryptography @ file:///tmp/build/80754af9/cryptography_1639400846433/work
-debugpy @ file:///tmp/build/80754af9/debugpy_1637091796427/work
-decorator @ file:///tmp/build/80754af9/decorator_1632776554403/work
-distro @ file:///home/conda/feedstock_root/build_artifacts/distro_1636872986284/work
+cryptography==36.0.0
+debugpy==1.5.1
+decorator==5.1.0
+distro==1.6.0
 entrypoints==0.3
-idna @ file:///tmp/build/80754af9/idna_1637925883363/work
-ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1641325327884/work/dist/ipykernel-6.6.1-py3-none-any.whl
-ipython @ file:///tmp/build/80754af9/ipython_1635943998418/work
-jedi @ file:///tmp/build/80754af9/jedi_1611333125342/work
-jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1640335223713/work
-jupyter-core @ file:///tmp/build/80754af9/jupyter_core_1636524756443/work
-matplotlib-inline @ file:///tmp/build/80754af9/matplotlib-inline_1628242447089/work
+idna==3.3
+ipykernel==6.6.1
+ipython==7.29.0
+jedi==0.18.0
+jupyter-client==7.1.0
+jupyter-core==4.9.1
+matplotlib-inline==0.1.2
 mkl-fft==1.3.1
-mkl-random @ file:///tmp/build/80754af9/mkl_random_1626186064646/work
+mkl-random==1.2.2
 mkl-service==2.4.0
-nest-asyncio @ file:///tmp/build/80754af9/nest-asyncio_1613680548246/work
-numexpr @ file:///tmp/build/80754af9/numexpr_1640704208950/work
-numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1634095647912/work
-packaging @ file:///tmp/build/80754af9/packaging_1637314298585/work
+nest-asyncio==1.5.1
+numexpr==2.8.1
+numpy==1.21.2
+packaging==21.3
 pandas==1.3.5
-parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
-pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
-pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
-prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1633440160888/work
-ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
-pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
-Pygments @ file:///tmp/build/80754af9/pygments_1629234116488/work
-pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1635333100036/work
-pyparsing @ file:///tmp/build/80754af9/pyparsing_1635766073266/work
-PySocks @ file:///tmp/build/80754af9/pysocks_1605305779399/work
-python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
-python-dotenv @ file:///home/conda/feedstock_root/build_artifacts/python-dotenv_1636649191224/work
+parso==0.8.3
+pexpect==4.8.0
+pickleshare==0.7.5
+pip==21.2.4
+prompt-toolkit==3.0.20
+ptyprocess==0.7.0
+pycparser==2.21
+Pygments==2.10.0
+pyOpenSSL==21.0.0
+pyparsing==3.0.4
+PySocks==1.7.1
+python-dateutil==2.8.2
+python-dotenv==0.19.2
 pytz==2021.3
-pyzmq @ file:///tmp/build/80754af9/pyzmq_1638436375034/work
-requests @ file:///tmp/build/80754af9/requests_1629994808627/work
-selenium @ file:///tmp/build/80754af9/selenium_1614267795165/work
-setuptools-scm @ file:///home/conda/feedstock_root/build_artifacts/setuptools_scm_1631397603934/work
-six @ file:///tmp/build/80754af9/six_1623709665295/work
-soupsieve @ file:///tmp/build/80754af9/soupsieve_1636706018808/work
-tabula-py @ file:///home/conda/feedstock_root/build_artifacts/tabula-py_1637005829079/work
-tomli @ file:///home/conda/feedstock_root/build_artifacts/tomli_1639523130782/work
-tornado @ file:///tmp/build/80754af9/tornado_1606942300299/work
-traitlets @ file:///tmp/build/80754af9/traitlets_1636710298902/work
+pyzmq==22.3.0
+requests==2.26.0
+selenium==3.141.0
+setuptools==58.0.4
+setuptools-scm==6.3.2
+six==1.16.0
+soupsieve==2.3.1
+tabula-py==2.2.0
+tomli==2.0.0
+tornado==6.1
+traitlets==5.1.1
 urllib3==1.26.7
-wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
+wcwidth==0.2.5
+wheel==0.37.1

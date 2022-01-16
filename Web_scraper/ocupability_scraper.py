@@ -24,7 +24,14 @@ def to_cosmos_db(df, career_letter, containerdb):
     courses_keys = df.columns.tolist()
     processed_courses = df.values.tolist()
     data = [dict(zip(courses_keys, course)) for course in processed_courses]
-    api = {"courses": data, "id":career_letter}
+    api = {"courses": data}
+    if career_letter == "M":
+        container_Mtemp.upsert_item(api)
+    elif career_letter == "B":
+        container_Btemp.upsert_item(api)
+    else:
+        container_Ttemp.upsert_item(api)
+    api["id"] = career_letter
     containerdb.upsert_item(api)
 
 # User credentials
@@ -40,6 +47,9 @@ DATABASE_ID = os.getenv('DBID')
 client = CosmosClient(HOST, {'masterKey': MASTER_KEY})
 db = client.get_database_client(DATABASE_ID)
 container_prueba = db.get_container_client("Prubea")
+container_Mtemp = db.get_container_client("MTemp")
+container_Btemp = db.get_container_client("BTemp")
+container_Ttemp = db.get_container_client("TTemp")
 
 # Schedules
 M_schedule = pd.read_csv("Web_scraper/Data2022_2/mechatronics_schedules.csv").dropna()

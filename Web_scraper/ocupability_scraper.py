@@ -25,12 +25,6 @@ def to_cosmos_db(df, career_letter, containerdb):
     processed_courses = df.values.tolist()
     data = [dict(zip(courses_keys, course)) for course in processed_courses]
     api = {"courses": data}
-    if career_letter == "M":
-        container_Mtemp.upsert_item(api)
-    elif career_letter == "B":
-        container_Btemp.upsert_item(api)
-    else:
-        container_Ttemp.upsert_item(api)
     api["id"] = career_letter
     containerdb.upsert_item(api)
 
@@ -46,15 +40,15 @@ DATABASE_ID = os.getenv('DBID')
 # Azure credentials
 client = CosmosClient(HOST, {'masterKey': MASTER_KEY})
 db = client.get_database_client(DATABASE_ID)
-container_prueba = db.get_container_client("Prubea")
-container_Mtemp = db.get_container_client("MTemp")
-container_Btemp = db.get_container_client("BTemp")
-container_Ttemp = db.get_container_client("TTemp")
+container_careers = db.get_container_client("careers")
+# container_Mtemp = db.get_container_client("MTemp")
+# container_Btemp = db.get_container_client("BTemp")
+# container_Ttemp = db.get_container_client("TTemp")
 
 # Schedules
-M_schedule = pd.read_csv("Web_scraper/Data2022_2/mechatronics_schedules.csv").dropna()
-B_schedule = pd.read_csv("Web_scraper/Data2022_2/bionics_schedules.csv").dropna()
-T_schedule = pd.read_csv("Web_scraper/Data2022_2/telematics_schedules.csv").dropna()
+M_schedule = pd.read_csv("Web_scraper/Data_2023_1/mechatronics_schedules.csv").dropna()
+B_schedule = pd.read_csv("Web_scraper/Data_2023_1/bionics_schedules.csv").dropna()
+T_schedule = pd.read_csv("Web_scraper/Data_2023_1/telematics_schedules.csv").dropna()
 columns_name = ["Grupo", "Semestre", "Cupo", "Inscritos", "Disponibles", "Asignatura", "id"]
 
 for career_df in [M_schedule, B_schedule, T_schedule]:
@@ -126,6 +120,6 @@ careers_to_api = {"M": (M_schedule, M_ocupability), "B": (B_schedule, B_ocupabil
 
 for career_letter in careers_to_api.keys():
     career_full = concat_sort(careers_to_api[career_letter][0], careers_to_api[career_letter][1])
-    to_cosmos_db(career_full, career_letter, container_prueba)
+    to_cosmos_db(career_full, career_letter, container_careers)
 
     # time.sleep(10)

@@ -30,7 +30,8 @@ driver.save_screenshot("screen.png")
 # Sending the user data to the form
 user_in.send_keys(user)
 pas_in.send_keys(password)
-captcha_in.send_keys(input("Captcha:"))
+captcha = input("Captcha:")
+captcha_in.send_keys(captcha)
 pas_in.send_keys(Keys.RETURN)
 
 # Going to the schedules page in the same session
@@ -47,7 +48,7 @@ for career in careers.keys():
     career_schedules_selector = Select(career_schedules_finder)
     career_schedules_selector.select_by_value(career)
     for period in periods:
-        time.sleep(0.3)
+        # time.sleep(0.3)
         try:
             period_finder = driver.find_element_by_id("ctl00_mainCopy_Filtro_lsNoPeriodos")
             period_selector = Select(period_finder)
@@ -55,7 +56,7 @@ for career in careers.keys():
         except:
             pass
         for shift in shifts:
-            time.sleep(0.3)
+            # time.sleep(0.3)
             shift_finder = driver.find_element_by_id("ctl00_mainCopy_Filtro_cboTurno")
             shift_selector = Select(shift_finder)
             shift_selector.select_by_value(shift)
@@ -70,6 +71,6 @@ mechatronics = pd.DataFrame(careers["M"][1:], columns=column_info).drop(["Edific
 bionics = pd.DataFrame(careers["B"][1:], columns=column_info).drop(["Edificio", "Salón", "Sab"], axis=1)
 telematicss = pd.DataFrame(careers["T"][1:], columns=column_info).drop(["Edificio", "Salón", "Sab"], axis=1)
 
-mechatronics.to_csv("Web_scraper/Data2022_2/mechatronics_schedules.csv", index=False)
-bionics.to_csv("Web_scraper/Data2022_2/bionics_schedules.csv", index=False)
-telematicss.to_csv("Web_scraper/Data2022_2/telematics_schedules.csv", index=False)
+mechatronics.to_csv("Web_scraper/Data_2023_1/mechatronics_schedules.csv", index=False)
+bionics.to_csv("Web_scraper/Data_2023_1/bionics_schedules.csv", index=False)
+telematicss.to_csv("Web_scraper/Data_2023_1/telematics_schedules.csv", index=False)
